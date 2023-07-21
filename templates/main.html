@@ -1,0 +1,286 @@
+{% extends 'master_home.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="{% static 'img/logoB.png' %}">
+                    <h2>GEST<span class="danger">ORGTI</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-symbols-sharp">close</span>
+                </div>
+            </div>
+            <div class="sidebar">
+                <a href="#">
+                    <span class="material-symbols-sharp">grid_view</span>
+                    <h3>DashBoard</h3>
+                </a>
+                <a href="#" class="active">
+                    <span class="material-symbols-sharp">view_module</span>
+                    <h3>Modulos</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-sharp">monitoring</span>
+                    <h3>Estadisticas</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-sharp">receipt_long</span>
+                    <h3>Reportes</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-sharp">settings</span>
+                    <h3>Configuracion</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-sharp">inbox</span>
+                    <h3>Mensajes</h3>
+                    <span class="message-count">28</span>
+                </a>
+                 {% if request.user.is_authenticated %}
+                <a href="{% url 'logout' %}">
+                    <span class="material-symbols-sharp">logout</span>
+                <h3>Salir</h3>
+                </a>
+                {% else %}
+                <a href="{% url 'login' %}">Ingresar</a>
+                {% endif %}
+            </div>
+        </aside>
+        <!------------------------ END ASIDE ------------------------------>
+
+        <main>
+            <h1>Dashboard</h1>
+            <div class="date">
+                <input type="date">
+            </div>
+            <div class="insights">
+                <div class="reportes">
+                    <span class="material-symbols-sharp">folder</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Reportes Totales</h3>
+                            <h1>5</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="number">
+                                <p>81%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">Reportes Por modulo</small>
+                    <!----------------- END MODULOS ------------------------------>
+                </div>
+                <div class="vehiculos">
+                    <span class="material-symbols-sharp">directions_bus</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Carros Por Persona</h3>
+                            <h1>5</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="number">
+                                <p>81%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">Reportes Por modulo</small>
+                    <!----------------- END VEHICULOS ------------------------------>
+                </div>
+                <div class="modulos">
+                    <span class="material-symbols-sharp">badge</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Modulos Por Persona</h3>
+                            <h1>5</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="number">
+                                <p>81%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">Reportes Por modulo</small>
+                    <!----------------- END MODULOS ------------------------------>
+                </div>
+            </div>
+            <!----------------------- END INSIGHTS ------------------------------->
+
+            <div class="recent-activity">
+                <h2>Actividad Reciente</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Descarga Reciente</th>
+                            <th>Nombre Modulo</th>
+                            <th>Numero de Registros</th>
+                            <th>Estado del Infome</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Microseguros</td>
+                            <td>Contabilidad</td>
+                            <td>15</td>
+                            <td class="success">Activo</td>
+                            <td class="warning">Detalles</td>
+                        </tr>
+                        <tr>
+                            <td>Microseguros</td>
+                            <td>Contabilidad</td>
+                            <td>15</td>
+                            <td class="success">Activo</td>
+                            <td class="warning">Detalles</td>
+                        </tr>
+                        <tr>
+                            <td>Microseguros</td>
+                            <td>Contabilidad</td>
+                            <td>15</td>
+                            <td class="success">Activo</td>
+                            <td class="warning">Detalles</td>
+                        </tr>
+                        <tr>
+                            <td>Microseguros</td>
+                            <td>Contabilidad</td>
+                            <td>15</td>
+                            <td class="success">Activo</td>
+                            <td class="warning">Detalles</td>
+                        </tr>
+                        <tr>
+                            <td>Microseguros</td>
+                            <td>Contabilidad</td>
+                            <td>15</td>
+                            <td class="success">Activo</td>
+                            <td class="warning">Detalles</td>
+                        </tr>
+                        <tr>
+                            <td>Microseguros</td>
+                            <td>Contabilidad</td>
+                            <td>15</td>
+                            <td class="success">Activo</td>
+                            <td class="warning">Detalles</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a href="#">Show All</a>
+            </div>
+        </main>
+        <!----------------------- END MAIN --------------------------------->
+        <div class="right">
+            <div class="top">
+                <button id="menu-btn">
+                    <span class="material-symbols-sharp">menu</span>
+                </button>
+                <div class="theme-toggler">
+                    <span class="material-symbols-sharp active">brightness_5</span>
+                    <span class="material-symbols-sharp">sleep</span>
+                </div>
+                <div class="profile">
+                    <div class="info">
+                        <p><b> Bienvenido</b></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="{% static 'img/superpremium.jpg' %}">
+                    </div>
+                </div>
+            </div>
+            <!---- END OF TOP ------>
+
+            <div class="recent-updates">
+                <h2>Actualizaciones Recientes</h2>
+                <div class="updates">
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="{% static 'img/logoB.png' %}">
+                        </div>
+                        <div class="message">
+                            <p><b> Laura Betancourt </b> Descargo El reporte de Microseguros</p>
+                            <small class="text-muted"> El dia de ayer </small>
+                        </div>
+                    </div>
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="{% static 'img/logoB.png' %}">
+                        </div>
+                        <div class="message">
+                            <p><b> Laura Betancourt </b> Descargo El reporte de Microseguros</p>
+                            <small class="text-muted"> El dia de ayer </small>
+                        </div>
+                    </div>
+                    <div class="update">
+                        <div class="profile-photo">
+                            <img src="{% static 'img/logoB.png' %}">
+                        </div>
+                        <div class="message">
+                            <p><b> Laura Betancourt </b> Descargo El reporte de Microseguros</p>
+                            <small class="text-muted"> El dia de ayer </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-------------------------------- END RECENT UPDATES ----------------------------->
+            <div class="clients-analytics">
+                <h2>ANALISIS DE VEHICULOS</h2>
+                <div class="item t-online">
+                    <div class="icon">
+                        <span class="material-symbols-sharp">supervised_user_circle</span>
+                    </div>
+                    <div class="right">
+                        <div class="info">
+                            <h3>VEHICULOS CON MAS VIAJES TRANSCARGA</h3>
+                            <small class="text-muted">de la ultima semana</small>
+                        </div>
+                        <h5 class="success">+39%</h5>
+                        <h3 class="primary">277</h3>
+                    </div>
+                </div>
+                <div class="item b-online">
+                    <div class="icon">
+                        <span class="material-symbols-sharp">bus_alert</span>
+                    </div>
+                    <div class="right">
+                        <div class="info">
+                            <h3>VEHICULOS CON MAS VIAJES BERLINAS</h3>
+                            <small class="text-muted">de la ultima semana</small>
+                        </div>
+                        <h5 class="success">+39%</h5>
+                        <h3 class="primary">8040</h3>
+                    </div>
+                </div>
+                <div class="item c-online">
+                    <div class="icon">
+                        <span class="material-symbols-sharp">bus_alert</span>
+                    </div>
+                    <div class="right">
+                        <div class="info">
+                            <h3>VEHICULOS CON MAS VIAJES COLIBERTADOR</h3>
+                            <small class="text-muted">de la ultima semana</small>
+                        </div>
+                        <h5 class="success">+39%</h5>
+                        <h3 class="primary">310</h3>
+                    </div>
+                </div>
+                <div class="item add-car">
+                    <div>
+                        <span class="material-symbols-sharp">add</span>
+                        <h3>Add Car</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

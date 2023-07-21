@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans&family=Tilt+Neon&display=swap');
+
+*{
+    font-family: 'Tilt Neon', cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #A9DFBF;
+}
+
+.form{
+    position: absolute;
+    max-width: 430px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+header{
+    fonts-size: 28px;
+    font-weight: 600;
+    color: #232836
+    display: flex;
+    text-align: center;
+    justify-content: center; /* Alinea horizontalmente al centro */
+}
+
+form{
+   margin-top: 30px;
+}
+
+.form .field{
+    position: relative;
+    height: 65px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 6px;
+}
+.field button,
+.field a,
+.field input{
+    height: 65%;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 6px;
+}
+
+.field input{
+    outline: none;
+    padding: 0 15px;
+    border: 1px solid #CACACA;
+}
+
+.field input:focus{
+    border-bottom-width: 2px;
+}
+
+.eye-icon{
+    position: absolute;
+    top: 60%;
+    right: 10px;
+    transform: translateY(-10%);
+    font-size: 18px;
+    color: #8b8b8b;
+    cursor: pointer;
+    padding: -10px;
+}
+
+.field button{
+    color: #fff;
+    background-color: #28B463;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.field button::hover{
+    background-color: #196F3D;
+}
+
+.form-link{
+    text-align:center;
+    margin-top: 10px;
+    color: #232836;
+}
+
+.form a{
+    color: #0171d3;
+    text-decoration: none;
+}
+
+.form a:hover{
+    text-decoration: underline;
+}
+
+.line{
+    position: relative;
+    height: 2px;
+    width: 100%;
+    margin: 36px 0;
+    background-color: #d4d4d4;
+}
+
+.line::before{
+    content:'Si No Puedes Ingresar Contacta';
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    transform: translateY( -25%, -25%)
+    background-content: #FFF;
+    color: #232836;
+    padding: 0 3px;
+}
+
+.media-option a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+a.Phone {
+    color: #17202A ;
+    background-color: #52BE80;
+}
+a.Phone .phone-icon{
+    height: 28px;
+    width: 28px;
+    color: #0CC526;
+    font-size: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.phone-icon{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%)
+}
+
+.field a{
+    color: #fff;
+    background-color: #28B463;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.field a::hover{
+    background-color: #196F3D;
+}

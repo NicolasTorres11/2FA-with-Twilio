@@ -1,0 +1,41 @@
+{% load static %}
+
+<nav>
+    <div class="logo-name">
+        <div class="logo-img">
+            <img src="{% static 'img/logoB.png' %}" alt="">
+        </div>
+        <span class="logo_name">BERPORTS</span>
+    </div>
+    <div class="menu-items">
+        <ul class="nav-links">
+            <li><a href="#">
+                <i class="uil uil-estate"></i>
+                <span class="link-name"> Inicio </span>
+            </a></li>
+            <li><a href="#">
+                <i class="uil uil-file-minus-alt"></i>
+                <span class="link-name"> Documentos </span>
+            </a></li>
+            <li><a href="#">
+                <i class="uil uil-analysis"></i>
+                <span class="link-name"> Estadisticas </span>
+            </a></li>
+        </ul>
+        <ul class="logout-mode">
+            <li><a href="#">
+                <i class="uil uil-signout"></i>
+                <span class="link-name"> Cerrar sesion </span>
+            </a></li>
+            <li class="mode">
+                <a href="#">
+                    <i class="uil uil-moon"></i>
+                    <span class="link-name"> Modo Oscuro </span>
+                </a>
+                <div class="mode-toggle">
+                    <span class="switch"></span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>

@@ -1,0 +1,21 @@
+{% extends 'master_login.html' %}
+
+
+{% block content %}
+<div class="form code">
+    <div class="form-content">
+        <form method="post">
+            {% csrf_token %}
+            <div class="field input-field">
+                <label for="number">Codigo:</label>
+                <input type="text" name="number" id="number" class="number" required
+                       placeholder="Código de Verificacion">
+            </div>
+            <div class="field button-field">
+                <button type="submit">INGRESAR</button>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'master_login.html' %}
+
+{% block content %}
+<div class="form login">
+    <div class="form-content">
+        <header>INICIAR SESION</header>
+        <form method="post">
+            {% csrf_token %}
+            <div class="field input-field">
+                <label for="username">Nombre de usuario:</label>
+                <input type="text" name="username" id="username" class="username" required
+                       placeholder="Nombre de Usuario">
+            </div>
+            <div class="field input-field">
+                <label for="password">Contraseña:</label>
+                <input type="password" name="password" id="password" class="password" required
+                       placeholder="Contraseña">
+                <i class='bx bx-hide eye-icon'></i>
+            </div>
+
+            <div class="form-link">
+                <a href="#" class="forgot-password"> ¿Olvido Su Contraseña? </a>
+            </div>
+            <div class="field button-field">
+                <button type="submit">INGRESAR</button>
+            </div>
+        </form>
+    </div>
+    <div class="line">
+
+    </div>
+    <div class="media-option">
+        <a href="" class="field Phone">
+            <i class='bx bx-phone-outgoing phone-icon'></i>
+            <span>Llamar al Departamento</span>
+        </a>
+    </div>
+    <div class="field button-field">
+        <a href="{% url 'index' %}" class="btn" type="submit">REGRESAR</a>
+    </div>
+</div>
+{% endblock %}

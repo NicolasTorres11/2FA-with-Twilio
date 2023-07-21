@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans&family=Tilt+Neon&display=swap');
+
+body {
+    font-family: 'Tilt Neon', cursive;
+    overflow-x: hidden;
+    color:#3f3f3f;
+}
+
+/
+*==========MENU================*
+/
+
+#menu a {
+    font-size:18px;
+    font-weight:bold;
+    color:#f3f3f3f;
+}
+
+#menu button {
+    font-size:18px;
+    font-weight:bold;
+
+}
+
+/
+*===========IMAGES==============*
+/
+
+.carrousel-inner{
+    max-height: 39rem;
+
+}
+
+
+/
+*==============MEDIA QUERIES SM SCREEN========*
+/
+
+@media (max-width:768px) {
+    #intro {
+        width:90% !important;
+    }
+
+    .servicio-fila {
+        width:100% !important;
+        text-align:center;
+    }
+
+    #bg-contactos {
+    top:-110px;
+}
+
+}
+
+/
+*=================MEDIA QUERIES EXTRA-SM SCREEN====================*
+/
+
+@media (max-width: 576px){
+    .icono-wrap{
+        flex-wrap: wrap;
+        justify-content: center !important;
+    }
+}
+
+
+/
+*====================MAPA=====================*
+/
+
+#mapa {
+    background-image: url('{% static "img/mapa.jpg" %}');
+    width: 100%;
+    height: 500px;
+}
+
+#local {
+    background: #f3f3f3;
+    padding-bottom: 300px;
+    display:flex;
+    justify-content: center;
+}
+
+.wrapper {
+    width:50%;
+    margin-left:100px;
+    padding-top:150px;
+}
+
+/
+*====================MEDIA QUERIES WIDE SCREEN=================*
+/
+
+@media (max-width:1200px){
+    #local {
+        flex-wrap: wrap;
+        padding-top: 30px;
+    }
+
+    .wrapper {
+        width: 90%;
+        margin-auto;
+        padding-top: 50px;
+    }
+}
+
+/
+*============ SECTION TEAM TIC ==============*
+/
+
+#numeros-local div {
+    padding: 0 20px 0 0;
+    height: 48px;
+}
+
+#numeros-local div:not(:last-child){
+    border-right: 2px solid #3f3f3f;
+
+}
+
+#numeros-local div:not(:first-child){
+    padding-left:20px;
+}
+
+#numeros-local p {
+    margin: 0;
+}
+
+/
+*============== CONTACTS BACKGROUND ============*
+/
+
+#bg-contactos {
+    position:relative;
+    top:-130px;
+}
+
+#seccion-contacto {
+    background-color: #145A32;
+    min-height: 500px;
+    position:relative;
+}
+
+/
+*================ FORM REGISTER ==============*
+/
+
+#form-container {
+    position:absolute;
+    top:30%;
+    left:50%;
+    transform: translate(-50%, -50%)
+    background: #fbfafa;
+    border-radius;
+    margin-width:500px;
+}
+
+#titulo-formulario {
+    color: #33f3f3f;
+}
+
+footer {
+    background: #ABEBC6;
+}
+
